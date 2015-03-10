@@ -1,0 +1,33 @@
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+pygments: true
+
+kramdown:
+  input: GFM
+
+# 作者信息
+author: 
+  name: john lewis
+  email: icmzng@gmail.com
+  link: http://www.icmzn.com
+  weibo: http://www.icmzn.com
+  github: http://github.com/johnlewis
+
+# 站点信息
+title: John Lewis' Blog 
+description: John Lewis' Blog
+url: http://www.icmzn.com
+rss_url: /pages/atom.xml
+
+# avatar头像及Favicon
+avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
+
+# google analytics 设置
+ga:
+  id: UA-60598120-1
+  url: www.icmzn.com
+
+# disqus 设置
+disqus:
+  shortname: icmzn
