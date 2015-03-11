@@ -20,14 +20,14 @@ url: http://www.icmzn.com
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
-avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
-favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
+#avatar: http://www.icmzn.com/assets/images/sys/zn.png
+#favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
 # google analytics 设置
 ga:
   id: UA-60598120-1
   url: www.icmzn.com
 
-# disqus 设置
+# disqus 设置评论，id
 disqus:
   shortname: icmzn
