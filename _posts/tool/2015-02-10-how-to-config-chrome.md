@@ -48,6 +48,4 @@ win7系统host文件位置：C:\Windows\System32\drivers\etc 找到host文件 �
 如果想访问youtobe，facebook， twiter等网站，目前还不能进行，需要进行翻墙设置，如何翻墙，步骤稍后奉上 ··· 
 
 
-一片很好的git指令学习教程[gitorder][] 阮一峰
 
-  [gitorder] http://www.ruanyifeng.com/blog/2014/06/git_remote.html
