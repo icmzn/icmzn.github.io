@@ -11,9 +11,11 @@ description:
 	
 ---
 
-#Java 如何借势？
 
-	             本文由icmzn精心整理，转载请注明出处(http://www.icmzn.com)！
+##Java 如何借势？
+
+
+		    本文由icmzn精心整理，转载请注明出处(http://www.icmzn.com)！
 
 JNI是Java本地调用接口，所谓的native就是调用C/C++的程序。由于操作系统提供的驱动一般都是C接口，Java语言并不具备操作这些驱动的能力。对于计算量比较大，处理数据比较多的模块，Java的效率没有C高，所以希望用C去完成。对于理解JNI的调用实现，对于理解Android的源码有帮助，因为Android系统中大量的使用了JNI。
 
@@ -22,7 +24,7 @@ JNI是Java本地调用接口，所谓的native就是调用C/C++的程序。由�
 本机环境Win7（64bit）,JRE(64bit)
 
 
-#按照JNI调用流程
+##按照JNI调用流程
 
 	1. 项目双方首先要商定好Java与C/C++交互的接口规范
 	2. 用Java写好包含native接口的Java类（HelloWorld）的java代码
@@ -132,16 +134,16 @@ VisualStudio2010之前没用，没有算则用户自定义安装，怕因为后�
 
 	1.  Can't load IA 32-bit .dll on a AMD 64-bit platform
 
-<img src="/assets/images/tech/dll_32_64_jre.jpg" width="50%" height="50%">
+<img src="/assets/images/tech/dll_32_64_jre.png" width="50%" height="50%">
 
 问题描述是32bit的dll文件不能运行在64bit的环境下运行？？？？？
 
 Why，然后查了一下我机器的环境，果然问题出在这里（在我的机器上），如在开篇之前交代了环境配置信息：
 
-1. java version "1.7.0_51" ：
-Java(TM) SE Runtime Environment (build 1.7.0_51-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
-2. VisualStudio2010编译动态Dll文件，默认是Win32，所以编译出来的动态链接库是32bit
+	1. java version "1.7.0_51" ：
+	Java(TM) SE Runtime Environment (build 1.7.0_51-b13)
+	Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+	2. VisualStudio2010编译动态Dll文件，默认是Win32，所以编译出来的动态链接库是32bit
 
 
 搜了一下解决方案
@@ -170,13 +172,18 @@ Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
 
 ---
 
-####看时间，已经是凌晨四点，休息休息岁吧，明天还要去实验室···苦逼的研究生生活···
+看时间，已经是凌晨四点，休息休息岁吧，明天还要去实验室···苦逼的研究生生活···
 
 
-#### 想起了小时候看的动画片“一休 一休，休息 ~ 休息 ~ ”
+想起了小时候看的动画片“一休 一休，休息 ~ 休息 ~ ”
 
 
 <img src="/assets/images/life/l_be_U_true.jpg" width="100%" height="50%">
+
+"修行的路总是孤独的，因为智慧必然来自孤独！"
+
+虽然我不全然认同这句话，但是这句话也并无不没有道理!
+
 
 COME ON!
 
