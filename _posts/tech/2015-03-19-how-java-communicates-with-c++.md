@@ -12,10 +12,10 @@ description:
 ---
 
 
-##Java 如何借势？
+##Java 如何"借势"？
 
 
-		    本文由icmzn精心整理，转载请注明出处(http://www.icmzn.com)！
+		  本文由icmzn精心整理，转载请注明出处(http://www.icmzn.com)！
 
 JNI是Java本地调用接口，所谓的native就是调用C/C++的程序。由于操作系统提供的驱动一般都是C接口，Java语言并不具备操作这些驱动的能力。对于计算量比较大，处理数据比较多的模块，Java的效率没有C高，所以希望用C去完成。对于理解JNI的调用实现，对于理解Android的源码有帮助，因为Android系统中大量的使用了JNI。
 
@@ -24,7 +24,7 @@ JNI是Java本地调用接口，所谓的native就是调用C/C++的程序。由�
 本机环境Win7（64bit）,JRE(64bit)
 
 
-##按照JNI调用流程
+###按照JNI调用流程
 
 	1. 项目双方首先要商定好Java与C/C++交互的接口规范
 	2. 用Java写好包含native接口的Java类（HelloWorld）的java代码
@@ -101,6 +101,7 @@ VisualStudio2010之前没用，没有算则用户自定义安装，怕因为后�
 ###### * 关于添加工程步骤 
 
 可以参考这篇博客[《创建一个动态链接库 (DLL)，使用VS2010》][new_project],感觉讲的还满细致的。
+
 [new_project]: http://www.cnblogs.com/fickleness/archive/2013/06/25/3154665.html
 "个人感觉还不错"
 
@@ -134,7 +135,7 @@ VisualStudio2010之前没用，没有算则用户自定义安装，怕因为后�
 
 	1.  Can't load IA 32-bit .dll on a AMD 64-bit platform
 
-<img src="/assets/images/tech/dll_32_64_jre.png" width="50%" height="50%">
+<img src="/assets/images/tech/dll_32_64_jre.jpg" width="80%" height="70%">
 
 问题描述是32bit的dll文件不能运行在64bit的环境下运行？？？？？
 
