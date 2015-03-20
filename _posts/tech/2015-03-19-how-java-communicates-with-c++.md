@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 如何与获取C/C++动态链接库Dll(详细解决过程)？
+title: Java 调用动态链接库Dll
 category: 技术
 tags: [java, C++, JNI, DLL]
 keywords: JNI,Conflict,DLL,Java,C++
@@ -12,7 +12,7 @@ description:
 ---
 
 
-##Java 如何"借势"？
+##Java如何"借势"？
 
 
 		  本文由icmzn精心整理，转载请注明出处(http://www.icmzn.com)！
@@ -24,7 +24,8 @@ JNI是Java本地调用接口，所谓的native就是调用C/C++的程序。由�
 本机环境Win7（64bit）,JRE(64bit)
 
 
-###按照JNI调用流程
+##按照JNI调用流程
+
 
 	1. 项目双方首先要商定好Java与C/C++交互的接口规范
 	2. 用Java写好包含native接口的Java类（HelloWorld）的java代码
@@ -96,7 +97,10 @@ VisualStudio2010之前没用，没有算则用户自定义安装，怕因为后�
 
 [youohua]: http://blog.csdn.net/fengbingchun/article/details/8990408
  "VS2010运行速度优化汇总"
+
+
 ### 1.5 VisualStudil2010编译工程
+
 
 ###### * 关于添加工程步骤 
 
@@ -135,7 +139,7 @@ VisualStudio2010之前没用，没有算则用户自定义安装，怕因为后�
 
 	1.  Can't load IA 32-bit .dll on a AMD 64-bit platform
 
-<img src="/assets/images/tech/dll_32_64_jre.jpg" width="80%" height="70%">
+<img src="/assets/images/tech/dll_32_64_jre.jpg" width="60%" height="40%">
 
 问题描述是32bit的dll文件不能运行在64bit的环境下运行？？？？？
 
@@ -171,7 +175,52 @@ Why，然后查了一下我机器的环境，果然问题出在这里（在我�
 	
 ### 到此为止，可以正常用java程序去调用C/C++产生的DLL文件了，关于带参数的调用，说明稍后奉上···
 
+参考文档：
+
+1. [Jni中C++和Java的参数传递][JNI_0]
+2. [Java Native Interface (JNI)][JNI_1]
+3. [Windows平台上的JNI学习][JNI_2]
+4. [System.load 和 System.loadLibrary详解][JNI_3]
+
+ [JNI_0]: http://www.cnblogs.com/qinjunni/archive/2012/02/22/2362734.html
+	"一指流砂"
+ [JNI_1]:https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html "专业讲述"
+ [JNI_2]: http://www.cnblogs.com/mizhongqin/archive/2013/05/09/window_jni.html
+	"抹去浮华,沉淀深度"
+ [JNI_3]: http://m.blog.csdn.net/blog/yujina2008/19040783
+ "yujina2008的专栏"
+
+**··························（还想补充一下）·································**
+
+**想说明一点，网上关于技术的帖子太乱了，并且都是大量重复的，有好的技术帖子，也有误导人的。推荐搭建关注国外的技术问答网站:[stackoverflow][nice_tec]**
+
+[nice_tec]:http://stackoverflow.com/
+ "很原汁原味的技术帖子"
+
+还想补充的是上述问题 产生HelloWorld.dll文件的问题：因为不同的环境，对不熟悉VisualStudio2010的人来说（包括我在内），很难一步生成适合的DLL文件 如：
+
+操作产生适合64bit虚拟机java执行环境调用的64bit的Dll vc2010配置结果图如下所示：
+
+
+<img src="/assets/images/life/Dll_01.jpg" width="60%" height="40%">
+
+（1）配置项目输出清单为“否”
+
+<img src="/assets/images/life/Dll_02.jpg" width="60%" height="40%">
+
+（2）配置解决方案的环境平台为“x64”和输出平台位x64
+
+<img src="/assets/images/life/Dll_03.jpg" width="60%" height="40%">
+
+（3）生成解决方案，在对等层次产生一个“x64”文件夹
+
+<img src="/assets/images/life/Dll_04.jpg" width="60%" height="40%">
+
+（4）点开“x64”文件夹，在其下产生位64bit环境执行的dll文件
+
+
 ---
+
 
 看时间，已经是凌晨四点，休息休息岁吧，明天还要去实验室···苦逼的研究生生活···
 
@@ -179,7 +228,7 @@ Why，然后查了一下我机器的环境，果然问题出在这里（在我�
 想起了小时候看的动画片“一休 一休，休息 ~ 休息 ~ ”
 
 
-<img src="/assets/images/life/l_be_U_true.jpg" width="100%" height="50%">
+<img src="/assets/images/life/l_be_U_true.jpg" width="100%" height="60%">
 
 "修行的路总是孤独的，因为智慧必然来自孤独！"
 
