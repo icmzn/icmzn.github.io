@@ -139,7 +139,7 @@ VisualStudio2010之前没用，没有算则用户自定义安装，怕因为后�
 
 	1.  Can't load IA 32-bit .dll on a AMD 64-bit platform
 
-<img src="/assets/images/tech/dll_32_64_jre.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/dll_32_64_jre.jpg" width="90%" height="70%">
 
 问题描述是32bit的dll文件不能运行在64bit的环境下运行？？？？？
 
@@ -204,19 +204,19 @@ Why，然后查了一下我机器的环境，果然问题出在这里（在我�
 操作产生适合64bit虚拟机java执行环境调用的64bit的Dll vc2010配置结果图如下所示：
 
 
-<img src="/assets/images/tech/Dll_01.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_01.jpg" width="90%" height="70%">
 
 （1）配置项目输出清单为“否”
 
-<img src="/assets/images/tech/Dll_02.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_02.jpg" width="90%" height="70%">
 
 （2）配置解决方案的环境平台为“x64”和输出平台位x64
 
-<img src="/assets/images/tech/Dll_03.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_03.jpg" width="90%" height="70%">
 
 （3）生成解决方案，在对等层次产生一个“x64”文件夹
 
-<img src="/assets/images/tech/Dll_04.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_04.jpg" width="90%" height="70%">
 
 （4）点开“x64”文件夹，在其下产生位64bit环境执行的dll文件
 
