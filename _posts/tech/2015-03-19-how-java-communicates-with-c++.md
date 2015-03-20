@@ -202,19 +202,19 @@ Why，然后查了一下我机器的环境，果然问题出在这里（在我�
 操作产生适合64bit虚拟机java执行环境调用的64bit的Dll vc2010配置结果图如下所示：
 
 
-<img src="/assets/images/life/Dll_01.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_01.jpg" width="60%" height="40%">
 
 （1）配置项目输出清单为“否”
 
-<img src="/assets/images/life/Dll_02.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_02.jpg" width="60%" height="40%">
 
 （2）配置解决方案的环境平台为“x64”和输出平台位x64
 
-<img src="/assets/images/life/Dll_03.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_03.jpg" width="60%" height="40%">
 
 （3）生成解决方案，在对等层次产生一个“x64”文件夹
 
-<img src="/assets/images/life/Dll_04.jpg" width="60%" height="40%">
+<img src="/assets/images/tech/Dll_04.jpg" width="60%" height="40%">
 
 （4）点开“x64”文件夹，在其下产生位64bit环境执行的dll文件
 
