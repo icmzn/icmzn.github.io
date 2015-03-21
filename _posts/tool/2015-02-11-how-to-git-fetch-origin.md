@@ -108,6 +108,19 @@ description:
 	9. 查看远程分支情况
 		$ git branch -r
 
+###注意问题：
+
+	1. 删除文件，不能直接在本地文件夹中操作，需要使用git指令,这样不会破坏github的版本控制的完整性
+	 $ git rm fileName 
+
+	2. git 重命名指令对文件名进行修改，也不能直接修改，原因同上
+	   将本地文件 README.txt 重命名为 README.md ；查看文件状态，然后提交到 repository 
+	 $ git mv README.txt README.md
+	 $ git commit -m "first rename filename"
+	 执行 commit 的时候，其实是执行了两个步骤，把 README.txt 删除提交，把 README.md 提交；
+
+---
+
    git中文学习：[clickme][zhongwenxuexi]
 
    git学习博客：[clickme][yuanyifeng]
