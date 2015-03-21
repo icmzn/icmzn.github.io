@@ -116,6 +116,7 @@ description:
 	2. git 重命名指令对文件名进行修改，也不能直接修改，原因同上
 	   将本地文件 README.txt 重命名为 README.md ；查看文件状态，然后提交到 repository 
 	 $ git mv README.txt README.md
+	 $ git add .
 	 $ git commit -m "first rename filename"
 	 执行 commit 的时候，其实是执行了两个步骤，把 README.txt 删除提交，把 README.md 提交；
 
