@@ -76,6 +76,49 @@ svn status打印五列字符，紧跟一些空格，接着是文件或者目录�
 
 
 
+<table>
+	<tr>
+		<td>缩写</td>
+		<td>含义</td>
+	</tr>
+	<tr>
+		<td>A: </td>
+
+	<td>add，新增 </td>
+	</tr>
+	<tr>
+		<td>C：</td>
+		<td>conflict，冲突</td>
+	</tr>
+	<tr>
+		<td>D：</td>
+		<td>delete，删除 </td>
+	</tr>
+	<tr>
+		<td>M：</td>
+		<td>modify，本地已经修改</td>
+	</tr>
+	<tr>
+		<td>G：</td>
+		<td>modify and merGed，本地文件修改并且和服务器的进行合并 </td>
+	</tr>
+	<tr>
+		<td>U：</td>
+		<td>update，从服务器更新 </td>
+	</tr>
+	<tr>
+		<td>R：</td>
+		<td>replace，从服务器替换 </td>
+	</tr>
+	<tr>
+		<td>I：</td>
+		<td>ignored，忽略</td>
+	</tr>
+</table>
+
+
+
+
 ### 本地操作对文件的影响
 	
 	1. 如果你在本地对文件进行了修改，那么该文件的图标就会被打上"*"
