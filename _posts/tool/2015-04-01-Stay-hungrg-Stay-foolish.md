@@ -3,7 +3,7 @@ layout: post
 title: Stay hungry，Stay foolish！
 category: 工具
 tags: Blog
-keywords: Chrome,Google,博客
+keywords: think different
 description: 
 ---
 
