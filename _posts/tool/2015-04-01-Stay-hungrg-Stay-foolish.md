@@ -7,7 +7,7 @@ keywords: Chrome,Google,博客
 description: 
 ---
 
- <img src="/assets/images/life/tool_jobs.jpg" width="80%" height="60%">
+ <img src="/assets/images/tool/tool_jobs.jpg" width="80%" height="60%">
 
  ##Stay hungry，Stay foolish
 
