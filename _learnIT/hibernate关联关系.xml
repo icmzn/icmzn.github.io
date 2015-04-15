@@ -1,0 +1,49 @@
+Hibernate关联关系以下几种：
+单项关系：1-->1；1-->n；n-->1；n-->n；
+双向关系: 1--1；1--n；n-–n；
+
+1.单项关系
+（1）n-->1
+只能n端访问1，不能1访问n；比如 “单位”对象1与“员工”N；
+N端PO保留1端PO的属性，而1端则不保留N端属性；
+配置文件中，N端需要配置many-to-one,主要是自动配置关联外键关系，并自动生成对应的DDL语句。
+
+
+<!-- 用于映射N-1关联实体，指定关联实体类为DanWei
+		指定外键列名为C_DanWei_ID,并指定级联全部操作 -->
+<many-to-one name="danwei" cascade="all" class="com.bean.DanWei" column="C_DanWei_ID"/>
+YuanGong.danwei ：称为外键属性
+T_yuangong.C_DanWei_ID : 称为 子表.外键字段列 
+DanWei : 关联对象PO
+T_Danwei.C_ID : 主表.参考字段列
+
+hibernate 将会在N的一端添加一个外键列，用于参考主表记录，并且hibernate无需使用链接表即可通过外键关联获取关联的属性。
+说明：
+colomn:关联的外键列字段，默认与属性同名；
+class：该属性指定关联实体的权限定类名，默认是通过反射得到所属类类名；
+cascade:级联操作，指定那些操作会从“主表”操作级联到“子表”，子表是员工PO，主表是PO单位，因为子表引用主表，子表保留主表的外键ID；cascade=all,只需要操作N端，一端会根据关联关系自动受到影响。hibernate会自动级联有限操作主表，然后在操作子表，否则将抛出异常，需要首先持久化主表对象，在设置子表的外键属性；···。
+fetch:指定hibernate的抓取策略，只能是‘join’ 使用外链接和‘select’使用选择抓取这两个特定值。默认？？？
+update，insert：指定此属性对应的字段是否包含在hibernate生成的update，insert语句中，默认都是true，如果都是false，则只是单纯的外键关联，他的值是有其他程序或者触发器生成；
+property-ref:指定关联类的一个属性字段，保留子表对应的外键关联字段中，默认使用关联类的主键C_ID；
+access:指定hibernate访问此关联属性的访问策略，默认是property；
+unique:指定hibernate通过自动DDL为关联类对应的表的对应关联列添加唯一约束，保证的外键字段关联的主表字段中一对一的效果，默认true；
+not-null:指定为hibernate通过自动DDL为关联类对应的表的对应关联列添加非空约束，默认true;
+lazy:指定引用关联实体的是否延迟加载特性，只允许：proxy，false，no-proxy三个值，默认是proxy,每次获取关联属性的代理；false，不使用代理，查询此实体是，关联的实体被预先查询出来；no-proxy,指定该实例变量第一次获取时，它的关联属性使用“延迟抓取”；
+not-found:指定该属性关联的主表对象的外键列不存在时的处理方式，只能使用exception，ignore两个，默认是exception，即不存在抛出异常；如果ignore，则hibernate在查询时，对忽略处理；
+formula:指定一个SQL表达式，该外键属性的值将根据SQL表达式计算。
+
+
+Tips:
+虽然hibernate可以完全替代JDBC，但是如果不了解底层SQL机制，很难用好hibernate的，对所有的外键关联的操作，（1）一定要设定好级联操作 （2）或者，先持久化主表记录对应的实体，然后再设置子类对象的外键属性，最后在持久化子类表记录对应的实体。否则，hibernate会因为“子表（从表）”记录参考的主表记录不存在，一定会抛出异常！
+
+有连接表的单项 N-->1
+(不常见！)
+
+（2）单向的1-->1,只需要将上面的N端的外键属性（从表（子表）的外键字段）配置指定唯一约束即可，即一个Yuangong只能对应一个DanWei
+
+
+ (3) 单向的N-->1,
+
+
+
+
